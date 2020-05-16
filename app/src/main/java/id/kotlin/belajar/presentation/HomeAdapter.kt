@@ -26,7 +26,7 @@ class HomeAdapter(private val results: List<Result>) : Adapter<HomeViewHolder>()
   override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
     holder.binding.apply {
       viewModel = HomeAdapterViewModel(results[holder.adapterPosition])
-      executePendingBindings()
+      executePendingBindings() //seems like notify data set changed
     }
   }
 
